@@ -5,9 +5,7 @@
 }
 
 .top-header {
-  background-image: url("../images/header-image.jpg");
-  /* background-color: linear-gradient(to left, blue, grey, white); */
-  background-color: #093C60;
+  background-image: url("../images/header-image.jpg"), linear-gradient(to left, blue, grey, white);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
