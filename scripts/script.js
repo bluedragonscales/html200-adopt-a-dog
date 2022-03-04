@@ -1,6 +1,7 @@
 let checkoutTotal = document.getElementById("checkout-total");
 let cost = document.getElementById("cost").textContent;
 let total = 0;
+let formTotalCost = document.getElementById("total-cost");
 
 // Function to add total dollars to check out. Figure out how to truncate the decimals to 2 places.
 function addToCheckOutTotal(){
@@ -82,3 +83,22 @@ function stella(){
   let breed = "Good Dog";
   alert("This dog is named " + name + " and their breed is " + breed + ". Their adoption cost is $" + cost + ".");
 };
+
+
+
+
+// JQUERY FUNCTIONS
+$('article').mouseenter(function() {
+  $(this).fadeTo(300).css("box-shadow", "10px 10px #ECECEC");;
+}).mouseout(function(){
+  $(this).fadeTo(300).css("box-shadow", "none");
+});
+
+
+
+
+// Console log the form data.
+$('#adoption-form').submit(function() {
+  var values = $(this).serialize();
+  console.log(values);
+});

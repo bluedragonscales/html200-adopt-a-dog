@@ -15,10 +15,10 @@
       <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
       <h1>Seattle's premier dog adoption agency</h1>
     </div>
-    <div class = "header-two">
+    <div class="header-two">
       <div class="cart">
         <img src="images/cart-icon.svg" alt="White shopping cart icon." title="White shopping cart icon.">
-        <p id="checkout-total">Total</p>
+        <p id="checkout-total"></p>
       </div>
       <button>Checkout</button>
     </div>
@@ -35,7 +35,7 @@
 
   <h2 class="checkout-header">Checkout</h2>
 
-  <form method="POST">
+  <form method="POST" id="adoption-form">
     <label>Name
       <input type="text" name="applicantName" id="name">
     </label>
@@ -112,7 +112,7 @@
 
       <div class="loc-input">
         <h4>Zip Code</h4>
-        <input type="number" name="applicantZip" id="zip">
+        <input type="number" name="applicantZip" id="zip" value="zip">
       </div>
     </div>
 
@@ -130,7 +130,7 @@
 
     <div class="loc-pickup">
       <h4>Pickup Location</h4>
-      <select>
+      <select id="pickup-loc">
         <option value=""></option>
         <option value="loc1">LocationOne</option>
         <option value="loc2">LocationTwo</option>
@@ -143,7 +143,7 @@
     </div>
 
     <div id="adopt-cost">
-      <h4>Total Adoption Cost</h4>
+      <h4>Total Adoption Cost: <span id="total-cost"></span></h4>
     </div>
 
     <input type="submit" value="Submit" id="submit-button">
@@ -161,5 +161,7 @@
     </div>
     <p class="copyright">&copy; 2018 Adoptadog, LLC  |  Seattle, WA</p>
   </footer>
+
+  <script src="/scripts.script.js" charset="utf-8"></script>
 </body>
 </html>
