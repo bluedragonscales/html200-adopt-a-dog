@@ -1,0 +1,20 @@
+User persona:
+Kirsten Dubble is a 35 year old, dark haired woman. Been out of college for a couple of years and just got a raise, finishing up paying college debts. Just got married to a man who already owned a family home, but has no pets except one that passed away 7 years ago. Kirsten and her husband are stable financially (he has a solid job with no college debt anymore), and in a stable relationship with a large backyard waiting to be filled. They have both only have two small laptops because they're on the go all the time and they have smart phones each.
+
+Users like Kirsten Dubble are the theoretical core users of this adopt-a-dog website. They have paid off most of their debt and have the resources and space to own larger, more active pets like dogs. At the very least, they use a laptop and a mobile phone on a regular basis. Most likely their products are Windows instead of Apple.
+
+
+Tests for 3 different Windows browsers:
+Chrome = website and hyperlinks work smoothly as expected since the site was developed with a chrome browser.
+Edge = website still works fairly the same as Chrome except about half a second slower.
+Firefox = seems to be exactly like Chrome for functionality.
+
+
+Test for MAC Safari browser:
+I went to the safari browser for a mac and it seems to work the same as in Windows Chrome. The speed and functionality haven't changed.
+
+
+Test for Android phone:
+The media queries worked to line up the dog articles in one column on the home page, but they aren't fitting to the screen and some of the elements are either misaligned or stretched weirdly.
+The dogs page still stays in three columns instead of going to one column, and the header doesn't align in one column either. However, even though the size of the buttons and the dogs are small, it still looks aesthetically pleasing to me.
+The blog page and the checkout page lines up in a column as designed, but the blog page could use some extra formatting to look and fit the screen nicer.
