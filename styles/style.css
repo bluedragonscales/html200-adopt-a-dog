@@ -5,9 +5,7 @@
 }
 
 .top-header {
-  background-image: url("../images/header-image.jpg");
-  /* background-color: linear-gradient(to left, blue, grey, white); */
-  background-color: #093C60;
+  background-image: url("../images/header-image.jpg"), linear-gradient(to left, blue, grey, white);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -281,6 +279,30 @@ article > button {
   font-weight: 100;
   color: #3D3D3D;
   font-size: 0.7rem;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-form textarea, input {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+}
+
+.blog-form input[type="submit"] {
+  width: 38%;
+  border: none;
+  padding: 0.9rem 4rem;
+  text-align: center;
+  background-color: #81B741;
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  cursor: pointer;
 }
 
 form {
