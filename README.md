@@ -1,3 +1,7 @@
 # html200-adopt-a-dog
 
-This is a website where you can view dogs that are up for adoption. You can select the dog you want to adopt and adopt them. You can also blog about dogs on the blog page.
+Created a fictional website according to instructions for a certificate assignment from University of Washington.
+
+Certificate: Front-End Web Development
+
+Used semantic HTML5, CSS3, and JavaScript to create a responsive, functional website about adopting puppies.
