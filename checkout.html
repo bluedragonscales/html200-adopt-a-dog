@@ -1,167 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Checkout</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <title>Checkout</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="header-one">
-      <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
-      <h1>Seattle's premier dog adoption agency</h1>
-    </div>
-    <div class="header-two">
-      <div class="cart">
-        <img src="images/cart-icon.svg" alt="White shopping cart icon." title="White shopping cart icon.">
-        <p id="checkout-total"></p>
-      </div>
-      <button>Checkout</button>
-    </div>
-  </header>
-  <nav>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#">/</a>
-      <a href="dogs.html">Dogs</a>
-      <a href="#">/</a>
-      <a href="blog.html">Blog</a>
-    </div>
-  </nav>
 
-  <h2 class="checkout-header">Checkout</h2>
+    <header class="top-header">
+        <div class="header-one">
+            <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
 
-  <form method="POST" id="adoption-form">
-    <label>Name
-      <input type="text" name="applicantName" id="name">
-    </label>
+            <h1>Seattle's premier dog adoption agency</h1>
+        </div>
 
-    <label>Email Address
-      <input type="email" name="applicantEmail" id="email">
-    </label>
+        <div class="header-two">
+            <div class="cart">
+                <img src="images/cart-icon.svg" alt="White shopping cart icon." title="White shopping cart icon.">
+                <p id="checkout-total"></p>
+            </div>
 
-    <label>Street Address
-      <input type="text" name="applicantAddress" id="address">
-    </label>
+            <button>Checkout</button>
+        </div>
+    </header>
 
-    <div class="form-loc">
-      <div class="loc-input">
-        <h4>City</h4>
-        <input type="text" name="applicantCity" id="city">
-      </div>
 
-      <div class="loc-input">
-        <h4>State</h4>
-        <select name="state" id="state">
-          <option value="Alabama">AL</option>
-          <option value="Alaska">AK</option>
-          <option value="Arkansas">AR</option>
-          <option value="Arizona">AZ</option>
-          <option value="California">CA</option>
-          <option value="Colorado">CO</option>
-          <option value="Connecticut">CT</option>
-          <option value="Delaware">DE</option>
-          <option value="Florida">FL</option>
-          <option value="Georgia">GA</option>
-          <option value="Hawaii">HI</option>
-          <option value="Idaho">ID</option>
-          <option value="Illinois">IL</option>
-          <option value="Indiana">IN</option>
-          <option value="Iowa">IA</option>
-          <option value="Kansas">KS</option>
-          <option value="Kentucky">KY</option>
-          <option value="Louisiana">LA</option>
-          <option value="Maine">ME</option>
-          <option value="Maryland">MD</option>
-          <option value="Massachusetts">MA</option>
-          <option value="Michigan">MI</option>
-          <option value="Minnesota">MN</option>
-          <option value="Mississippi">MS</option>
-          <option value="Missouri">MO</option>
-          <option value="Montana">MT</option>
-          <option value="Nebraska">NE</option>
-          <option value="Nevada">NV</option>
-          <option value="NewHampshire">NH</option>
-          <option value="NewJersey">NJ</option>
-          <option value="NewMexico">NM</option>
-          <option value="NewYork">NY</option>
-          <option value="NorthCarolina">NC</option>
-          <option value="NorthDakota">ND</option>
-          <option value="Ohio">OH</option>
-          <option value="Oklahoma">OK</option>
-          <option value="Oregon">OR</option>
-          <option value="Pennsylvania">PA</option>
-          <option value="RhodeIsland">RI</option>
-          <option value="SouthCarolina">SC</option>
-          <option value="SouthDakota">SD</option>
-          <option value="Tennessee">TN</option>
-          <option value="Texas">TX</option>
-          <option value="Utah">UT</option>
-          <option value="Vermont">VT</option>
-          <option value="Virginia">VA</option>
-          <option value="Washington">WA</option>
-          <option value="WestVirginia">WV</option>
-          <option value="Wisconsin">WI</option>
-          <option value="Wyoming">WY</option>
-        </select>
-      </div>
 
-      <div class="loc-input">
-        <h4>Zip Code</h4>
-        <input type="number" name="applicantZip" id="zip" value="zip">
-      </div>
-    </div>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">/</a>
+            <a href="dogs.html">Dogs</a>
+            <a href="#">/</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
 
-    <div id="checkbox">
-      <h4>First Time Adopter?</h4>
-      <label>
-        <input type="radio" name="special" value="yes">
-        Yes
-      </label>
-      <label>
-        <input type="radio" name="special" value="no">
-        No
-      </label>
-    </div>
 
-    <div class="loc-pickup">
-      <h4>Pickup Location</h4>
-      <select id="pickup-loc">
-        <option value=""></option>
-        <option value="loc1">LocationOne</option>
-        <option value="loc2">LocationTwo</option>
-        <option value="loc3">LocationThree</option>
-      </select>
-    </div>
 
-    <div id="dogs-adopted">
-      <h4>Dogs Adopted</h4>
-    </div>
+    <h2 class="checkout-header">Checkout</h2>
 
-    <div id="adopt-cost">
-      <h4>Total Adoption Cost: <span id="total-cost"></span></h4>
-    </div>
 
-    <input type="submit" value="Submit" id="submit-button">
-  </form>
+    <form method="POST" id="adoption-form">
+        <label>Name
+          <input type="text" name="applicantName" id="name">
+        </label>
 
-  <footer>
-    <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
-    <p>Aborpos nisto inci tet aut que volupti beruptiberro to ex esseque invenienihil imaximu scideru ptistiusam consequunt</p>
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">/</a>
-      <a href="#">Dogs</a>
-      <a href="#">/</a>
-      <a href="#">Contact</a>
-    </div>
-    <p class="copyright">&copy; 2018 Adoptadog, LLC  |  Seattle, WA</p>
-  </footer>
+        <label>Email Address
+          <input type="email" name="applicantEmail" id="email">
+        </label>
 
-  <script src="/scripts.script.js" charset="utf-8"></script>
+        <label>Street Address
+          <input type="text" name="applicantAddress" id="address">
+        </label>
+
+        <div class="form-loc">
+            <div class="loc-input">
+              <h4>City</h4>
+              <input type="text" name="applicantCity" id="city">
+            </div>
+
+            <div class="loc-input">
+                <h4>State</h4>
+
+                <select name="state" id="state">
+                    <option value="Alabama">AL</option>
+                    <option value="Alaska">AK</option>
+                    <option value="Arkansas">AR</option>
+                    <option value="Arizona">AZ</option>
+                    <option value="California">CA</option>
+                    <option value="Colorado">CO</option>
+                    <option value="Connecticut">CT</option>
+                    <option value="Delaware">DE</option>
+                    <option value="Florida">FL</option>
+                    <option value="Georgia">GA</option>
+                    <option value="Hawaii">HI</option>
+                    <option value="Idaho">ID</option>
+                    <option value="Illinois">IL</option>
+                    <option value="Indiana">IN</option>
+                    <option value="Iowa">IA</option>
+                    <option value="Kansas">KS</option>
+                    <option value="Kentucky">KY</option>
+                    <option value="Louisiana">LA</option>
+                    <option value="Maine">ME</option>
+                    <option value="Maryland">MD</option>
+                    <option value="Massachusetts">MA</option>
+                    <option value="Michigan">MI</option>
+                    <option value="Minnesota">MN</option>
+                    <option value="Mississippi">MS</option>
+                    <option value="Missouri">MO</option>
+                    <option value="Montana">MT</option>
+                    <option value="Nebraska">NE</option>
+                    <option value="Nevada">NV</option>
+                    <option value="NewHampshire">NH</option>
+                    <option value="NewJersey">NJ</option>
+                    <option value="NewMexico">NM</option>
+                    <option value="NewYork">NY</option>
+                    <option value="NorthCarolina">NC</option>
+                    <option value="NorthDakota">ND</option>
+                    <option value="Ohio">OH</option>
+                    <option value="Oklahoma">OK</option>
+                    <option value="Oregon">OR</option>
+                    <option value="Pennsylvania">PA</option>
+                    <option value="RhodeIsland">RI</option>
+                    <option value="SouthCarolina">SC</option>
+                    <option value="SouthDakota">SD</option>
+                    <option value="Tennessee">TN</option>
+                    <option value="Texas">TX</option>
+                    <option value="Utah">UT</option>
+                    <option value="Vermont">VT</option>
+                    <option value="Virginia">VA</option>
+                    <option value="Washington">WA</option>
+                    <option value="WestVirginia">WV</option>
+                    <option value="Wisconsin">WI</option>
+                    <option value="Wyoming">WY</option>
+                </select>
+            </div>
+
+            <div class="loc-input">
+                <h4>Zip Code</h4>
+                <input type="number" name="applicantZip" id="zip" value="zip">
+            </div>
+        </div>
+
+        <div id="checkbox">
+            <h4>First Time Adopter?</h4>
+
+            <label>
+              <input type="radio" name="special" value="yes">
+              Yes
+            </label>
+
+            <label>
+              <input type="radio" name="special" value="no">
+              No
+            </label>
+        </div>
+
+        <div class="loc-pickup">
+            <h4>Pickup Location</h4>
+
+            <select id="pickup-loc">
+                <option value=""></option>
+                <option value="loc1">LocationOne</option>
+                <option value="loc2">LocationTwo</option>
+                <option value="loc3">LocationThree</option>
+            </select>
+        </div>
+
+        <div id="dogs-adopted">
+            <h4>Dogs Adopted</h4>
+        </div>
+
+        <div id="adopt-cost">
+            <h4>Total Adoption Cost: <span id="total-cost"></span></h4>
+        </div>
+
+        <input type="submit" value="Submit" id="submit-button">
+    </form>
+
+
+
+    <footer>
+        <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
+
+        <p>Aborpos nisto inci tet aut que volupti beruptiberro to ex esseque invenienihil imaximu scideru ptistiusam consequunt</p>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">/</a>
+            <a href="#">Dogs</a>
+            <a href="#">/</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <p class="copyright">&copy; 2018 Adoptadog, LLC  |  Seattle, WA</p>
+    </footer>
+
+<script src="/scripts.script.js" charset="utf-8"></script>
 </body>
 </html>

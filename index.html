@@ -1,154 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
-  <title>Home</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="header-one">
-      <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
-      <h1>Seattle's premier dog adoption agency</h1>
+
+    <header class="top-header">
+        <div class="header-one">
+            <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
+
+            <h1>Seattle's premier dog adoption agency</h1>
+        </div>
+
+        <div class="header-two">
+            <div class="cart">
+              <img src="images/cart-icon.svg" alt="White shopping cart icon." title="White shopping cart icon.">
+
+              <p id="checkout-total"></p>
+            </div>
+
+            <button id="checkout" onclick="window.location.href ='checkout.html';">Checkout</button>
+        </div>
+    </header>
+
+
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">/</a>
+            <a href="dogs.html">Dogs</a>
+            <a href="#">/</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
+
+
+
+    <aside class="small-blog">
+        <h2 class="blog-header">From Our Blog</h2>
+
+        <article>
+            <img src="images/blog-1.jpg" alt="Girl at a canyon with dark brown dog." title="Girl at a canyon with dark brown dog." class="blog-img">
+
+            <div class="blog-text">
+                <h3>Traveling With Your Dog</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <a href="blog.html">Read more >></a>
+        </article>
+
+        <article>
+            <img src="images/blog-2.jpg" alt="Dogs on leashes lined up for a walk." title="Dogs on leashes lined up for a walk." class="blog-img">
+
+            <div class="blog-text">
+                <h3>How To Walk Multiple Dogs</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <a href="blog.html">Read more >></a>
+        </article>
+
+        <article>
+            <img src="images/blog-3.jpg" alt="Shadows of a girl holding a ball and a dog waiting for her to throw it." title="Shadows of a girl holding a ball and a dog waiting for her to throw it." class="blog-img">
+
+            <div class="blog-text">
+                <h3>Teach Your Dog To Fetch!</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <a href="blog.html">Read more >></a>
+        </article>
+    </aside>
+
+
+
+    <article class="front-page-article">
+        <div>
+            <img src="images/home-intro.jpg" alt="Guy in a red shirt hugging golden retriever." title="Guy in a red shirt hugging golden retriever.">
+        </div>
+
+        <div class="article-text">
+            <h2>Adopt A Dog</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </article>
+
+
+
+    <div class="container">
+        <article>
+            <img src="images/murphy-card.jpg" alt="Boxer with redish gold spots and a white nose." title="Boxer with redish gold spots and a white nose." onclick="murphy();">
+
+            <h4 id="name">Murphy</h4>
+
+            <p>Cost to adopt: $<span id="cost">123.45</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <button onclick="addToCheckOutTotal();">Adopt</button>
+        </article>
+
+        <article>
+            <img src="images/poppy-card.jpg" alt="Grey and white shih tzu dog walking along a an asphalt road." title="Grey and white shih tzu dog walking along an asphalt road" onclick="poppy();">
+
+            <h4 id="name">Poppy</h4>
+
+            <p>Cost to adopt: $<span id="cost">123.45</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <button onclick="addToCheckOutTotal();">Adopt</button>
+        </article>
+
+        <article>
+            <img src="images/jack-card.jpg" alt="Brownish gold and white beagle looking up from the floor." title="Brownish gold and white beagle looking up from the floor." onclick="jack();">
+
+            <h4 id="name">Jack</h4>
+
+            <p>Cost to adopt: $<span id="cost">123.45</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <button onclick="addToCheckOutTotal();">Adopt</button>
+        </article>
+
+        <article>
+            <img src="images/duffy-card.jpg" alt="Pit bull with a white face, gold spots, and black splotched nose sitting in grass." title="Pit bull with a white face, gold spots, and black splotched nose sitting in grass." onclick="duffy();">
+
+            <h4 id="name">Duffy</h4>
+
+            <p>Cost to adopt: $<span id="cost">123.45</span></p>
+            <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+
+            <button onclick="addToCheckOutTotal();">Adopt</button>
+        </article>
+
+        <article>
+            <img src="images/lucas-card.jpg" alt="Black retriever with white around nose and chained to a leash looking directly upward." title="Black retriever with white around nose and chained to a leash looking directly upward." onclick="lucas();">
+
+            <h4 id="name">Lucas</h4>
+
+            <p>Cost to adopt: $<span id="cost">123.45</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <button onclick="addToCheckOutTotal();">Adopt</button>
+        </article>
+
+        <article>
+            <img src="images/jake-card.jpg" alt="A golden retriever on a beach looking off into the distance." title="A golden retriever on a beach looking off into the distance." onclick="jake();">
+
+            <h4 id="name">Jake</h4>
+
+            <p>Cost to adopt: $<span id="cost">123.45</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <button onclick="addToCheckOutTotal();">Adopt</button>
+        </article>
+
+        <button class="bottom-button" onclick="location.href='dogs.html'">See More Dogs</button>
     </div>
-    <div class="header-two">
-      <div class="cart">
-        <img src="images/cart-icon.svg" alt="White shopping cart icon." title="White shopping cart icon.">
-        <p id="checkout-total"></p>
-      </div>
-      <button id="checkout" onclick="window.location.href ='checkout.html';">Checkout</button>
-    </div>
-  </header>
-  <nav>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#">/</a>
-      <a href="dogs.html">Dogs</a>
-      <a href="#">/</a>
-      <a href="blog.html">Blog</a>
-    </div>
-  </nav>
-
-
-  <aside class="small-blog">
-    <h2 class="blog-header">From Our Blog</h2>
-
-    <article>
-      <img src="images/blog-1.jpg" alt="Girl at a canyon with dark brown dog." title="Girl at a canyon with dark brown dog." class="blog-img">
-      <div class="blog-text">
-        <h3>Traveling With Your Dog</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <a href="blog.html">Read more >></a>
-      </div>
-    </article>
-
-    <article>
-      <img src="images/blog-2.jpg" alt="Dogs on leashes lined up for a walk." title="Dogs on leashes lined up for a walk." class="blog-img">
-      <div class="blog-text">
-        <h3>How To Walk Multiple Dogs</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <a href="blog.html">Read more >></a>
-      </div>
-    </article>
-
-    <article>
-      <img src="images/blog-3.jpg" alt="Shadows of a girl holding a ball and a dog waiting for her to throw it." title="Shadows of a girl holding a ball and a dog waiting for her to throw it." class="blog-img">
-      <div class="blog-text">
-        <h3>Teach Your Dog To Fetch!</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <a href="blog.html">Read more >></a>
-    </article>
-  </aside>
 
 
 
-  <article class="front-page-article">
-    <div>
-      <img src="images/home-intro.jpg" alt="Guy in a red shirt hugging golden retriever." title="Guy in a red shirt hugging golden retriever.">
-    </div>
-    <div class="article-text">
-      <h2>Adopt A Dog</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </article>
+    <footer>
+        <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
 
+        <p>Aborpos nisto inci tet aut que volupti beruptiberro to ex esseque invenienihil imaximu scideru ptistiusam consequunt</p>
 
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">/</a>
+            <a href="#">Dogs</a>
+            <a href="#">/</a>
+            <a href="#">Contact</a>
+        </div>
 
-  <div class="container">
-    <article>
-      <img src="images/murphy-card.jpg" alt="Boxer with redish gold spots and a white nose." title="Boxer with redish gold spots and a white nose." onclick="murphy();">
-      <h4 id="name">Murphy</h4>
-      <p>Cost to adopt: $<span id="cost">123.45</span></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button onclick="addToCheckOutTotal();">Adopt</button>
-    </article>
-
-    <article>
-      <img src="images/poppy-card.jpg" alt="Grey and white shih tzu dog walking along a an asphalt road." title="Grey and white shih tzu dog walking along an asphalt road" onclick="poppy();">
-      <h4 id="name">Poppy</h4>
-      <p>Cost to adopt: $<span id="cost">123.45</span></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button onclick="addToCheckOutTotal();">Adopt</button>
-    </article>
-
-    <article>
-      <img src="images/jack-card.jpg" alt="Brownish gold and white beagle looking up from the floor." title="Brownish gold and white beagle looking up from the floor." onclick="jack();">
-      <h4 id="name">Jack</h4>
-      <p>Cost to adopt: $<span id="cost">123.45</span></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button onclick="addToCheckOutTotal();">Adopt</button>
-    </article>
-
-    <article>
-      <img src="images/duffy-card.jpg" alt="Pit bull with a white face, gold spots, and black splotched nose sitting in grass." title="Pit bull with a white face, gold spots, and black splotched nose sitting in grass." onclick="duffy();">
-      <h4 id="name">Duffy</h4>
-      <p>Cost to adopt: $<span id="cost">123.45</span></p>
-      <a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
-      <button onclick="addToCheckOutTotal();">Adopt</button>
-    </article>
-
-    <article>
-      <img src="images/lucas-card.jpg" alt="Black retriever with white around nose and chained to a leash looking directly upward." title="Black retriever with white around nose and chained to a leash looking directly upward." onclick="lucas();">
-      <h4 id="name">Lucas</h4>
-      <p>Cost to adopt: $<span id="cost">123.45</span></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button onclick="addToCheckOutTotal();">Adopt</button>
-    </article>
-
-    <article>
-      <img src="images/jake-card.jpg" alt="A golden retriever on a beach looking off into the distance." title="A golden retriever on a beach looking off into the distance." onclick="jake();">
-      <h4 id="name">Jake</h4>
-      <p>Cost to adopt: $<span id="cost">123.45</span></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <button onclick="addToCheckOutTotal();">Adopt</button>
-    </article>
-
-    <button class="bottom-button" onclick="location.href='dogs.html'">See More Dogs</button>
-  </div>
-
-
-
-  <footer>
-    <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
-    <p>Aborpos nisto inci tet aut que volupti beruptiberro to ex esseque invenienihil imaximu scideru ptistiusam consequunt</p>
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">/</a>
-      <a href="#">Dogs</a>
-      <a href="#">/</a>
-      <a href="#">Contact</a>
-    </div>
-    <p class="copyright">&copy; 2018 Adoptadog, LLC  |  Seattle, WA</p>
-  </footer>
+        <p class="copyright">&copy; 2018 Adoptadog, LLC  |  Seattle, WA</p>
+    </footer>
 
 <script src="scripts/script.js" charset="utf-8"></script>
 </body>
