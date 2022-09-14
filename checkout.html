@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    <!-- The header section. -->
     <header class="top-header">
         <div class="header-one">
             <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
@@ -20,8 +20,8 @@
 
         <div class="header-two">
             <div class="cart">
-                <img src="images/cart-icon.svg" alt="White shopping cart icon." title="White shopping cart icon.">
                 <p id="checkout-total"></p>
+                <img src="images/cart-icon.svg" alt="White shopping cart icon." title="White shopping cart icon.">
             </div>
 
             <button>Checkout</button>
@@ -29,7 +29,7 @@
     </header>
 
 
-
+    <!-- The nav section. -->
     <nav>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -44,8 +44,9 @@
 
     <h2 class="checkout-header">Checkout</h2>
 
-
+    <!-- Start of the checkout form. -->
     <form method="POST" id="adoption-form">
+        <!-- Personal details of the form. -->
         <label>Name
           <input type="text" name="applicantName" id="name">
         </label>
@@ -66,7 +67,7 @@
 
             <div class="loc-input">
                 <h4>State</h4>
-
+                <!-- List of states to select. -->
                 <select name="state" id="state">
                     <option value="Alabama">AL</option>
                     <option value="Alaska">AK</option>
@@ -127,6 +128,7 @@
             </div>
         </div>
 
+        <!-- Some personal questions for adoption form. -->
         <div id="checkbox">
             <h4>First Time Adopter?</h4>
 
@@ -160,11 +162,12 @@
             <h4>Total Adoption Cost: <span id="total-cost"></span></h4>
         </div>
 
+        <!-- Button to submit the form. -->
         <input type="submit" value="Submit" id="submit-button">
     </form>
 
 
-
+    <!-- The footer section. -->
     <footer>
         <img src="images/adoptadog-logo.svg" alt="White logo of adopt a dog." title="White logo of adopt a dog.">
 
