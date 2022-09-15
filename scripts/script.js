@@ -1,22 +1,24 @@
-let checkoutTotal = document.getElementById("checkout-total");
-let cost = document.getElementById("cost");
-let total = 0;
+// let checkoutTotal = document.getElementById("checkout-total");
+// let cost = document.getElementById("cost");
+// let total = 0;
 // let formTotalCost = document.getElementById("total-cost");
-let adoptedDogs = [];
+// let adoptedDogs = [];
 
 
 // Function to add total dollars to checkout. Figure out how to truncate the decimals to 2 places.
-function addToCheckOutTotal(dogName) {
+// function addToCheckOutTotal(dogName) {
 
-  if (!adoptedDogs.includes(dogName)) {
-    adoptedDogs.push(dogName);
-    total = total + Number(cost.textContent);
-    checkoutTotal.textContent = "$" + total;
-  } else {
-    alert("You've already selected this lucky puppy.");
-  }
+//   if (!adoptedDogs.includes(dogName)) {
+//     adoptedDogs.push(dogName);
+//     total = total + Number(cost.textContent);
+//     localStorage.setItem('checkout-total', total);
+//     console.log(localStorage.getItem('checkout-total'));
+//     checkoutTotal.textContent = `$${localStorage.getItem('checkout-total')}`;
+//   } else {
+//     alert("You've already selected this lucky puppy.");
+//   }
 
-};
+// };
 
 
 
