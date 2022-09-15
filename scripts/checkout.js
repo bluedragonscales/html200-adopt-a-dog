@@ -14,10 +14,10 @@ function addToCheckOutTotal(dogName) {
         total = total + Number(cost.textContent);
         localStorage.setItem('checkout', total);
 
-        let finalTotal = Number(localStorage.getItem('checkout'));
+        let finalTotal = localStorage.getItem('checkout');
 
         checkoutTotal.textContent = `$${finalTotal}`;
-        checkingOut.textContent = `Total adoption cost: $${finalTotal}`;
+        checkingOut.textContent = `Total adoption cost: ${finalTotal}`;
     } else {
         alert("You've already selected this lucky puppy.");
     }
