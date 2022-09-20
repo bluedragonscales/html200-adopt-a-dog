@@ -1,35 +1,43 @@
 // Form submit for new blog post
-// const articleContainer = document.getElementById("blog-posts-container");
-// const postForm = document.getElementById("new-post-form");
+const articleContainer = document.getElementById("blog-posts-container");
+const postSubmitButton = document.getElementById("blog-submit");
 
-// postForm.addEventListener("submit", function (event) {
 
-//   event.preventDefault();
+postSubmitButton.addEventListener('click', function(ev) {
+    ev.preventDefault();
 
-//   let blogTitle = document.getElementById("blog-title");
-//   let post = document.getElementById("blog-words");
+    // Creating the new article body.
+    const newArticle = document.createElement('article');
 
-//   let articleImg = document.createElement("img");
-//   articleImg.setAttribute('src', 'images/blog-2.jpg');
-//   articleImg.setAttribute('class', 'blog-img');
-//   let artDiv = document.createElement("div");
-//   artDiv.setAttribute('class', 'blog-text');
-//   let articleTitle = document.createElement("h3");
-//   articleTitle.innerHTML = blogTitle.value;
-//   console.log(articleTitle);
-//   let articleContent = document.createElement("p");
-//   articleContent.innerHTML = post.value;
-//   console.log(articleContent);
+    // Creating and structuring the image element for the article.
+    const newImg = document.createElement('img');
+    newImg.setAttribute('src', 'images/blog-2.jpg');
+    newImg.setAttribute('class', 'blog-img');
+    newArticle.appendChild(newImg);
 
-//   let newArticle = document.createElement('article');
-//   newArticle.appendChild(articleImg);
-//   newArticle.appendChild(artDiv);
-//   artDiv.appendChild(articleTitle);
-//   artDiv.appendChild(articleContent);
-//   articleContainer.insertBefore(newArticle, articleContainer.firstChild);
+    // Creating the div inside of the article.
+    const artDiv = document.createElement('div');
+    artDiv.setAttribute('class', 'blog-text');
 
-//   alert("Thank you. The form information has been received.");
-//   blogTitle.value = '';
-//   post.value = '';
+    // Adding the title inside of the div and taking the created title from the form and putting it into the new article.
+    const blogTitle = document.createElement('h3');
+    let postTitle = document.getElementById('blog-title');
+    blogTitle.textContent = postTitle.value;
+    artDiv.appendChild(blogTitle);
+    
+    // Adding the blog post inside of the div and taking the created words from the form and putting it into the new article.
+    const blogPost = document.createElement('p');
+    let mainPost = document.getElementById('blog-words');
+    blogPost.textContent = mainPost.value;
+    artDiv.appendChild(blogPost);
 
-// });
+    // Appending the whole div onto the new article.
+    newArticle.appendChild(artDiv);
+
+    // Attaching the new article to the whole article container.
+    articleContainer.appendChild(newArticle);
+
+    // Wiping clean the inputs for the blog post form.
+    postTitle.value = '';
+    mainPost.value = '';
+});
